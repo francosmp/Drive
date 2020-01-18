@@ -107,9 +107,9 @@ class Drive:
 
     def pre_subida(self, carpeta, ruta):
 
-        archivos_drive = self.listar(100, 'Musica', carpeta)
         archivos_ruta = os.listdir(ruta)
-
+        archivos_drive = self.listar(len(archivos_ruta), 'Musica', carpeta)
+        
         if archivos_drive != 'No se encontro nada':  # Encontro datos
             for i in range(0, len(archivos_drive)):
                 archivos_drive[i] = archivos_drive[i]['name']
@@ -159,7 +159,7 @@ class Drive:
 
         ruta = self.ruta()
 
-        archivos_drive = self.listar(100, 'Musica', carpeta)
+        archivos_drive = self.listar(len(os.listdir(ruta)), 'Musica', carpeta)
 
         if archivos_drive != 'No se encontro nada':  # Encontro datos
             for i in range(0, len(archivos_drive)):
