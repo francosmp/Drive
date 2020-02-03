@@ -159,7 +159,7 @@ class Drive:
 
         ruta = self.ruta()
 
-        archivos_drive = self.listar(1000), 'Musica', carpeta)
+        archivos_drive = self.listar(1000, 'Musica', carpeta)
 
         if archivos_drive != 'No se encontro nada':  # Encontro datos
             for i in range(0, len(archivos_drive)):
